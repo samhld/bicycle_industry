@@ -9,7 +9,9 @@ class Shop(object):
     def __init__(self, name, inventory):
         self.name = name
         self.inventory = inventory
-        return inventory
+    def addInventory(self, bike):
+        self.inventory.append(bike)
+        
     # def sell(Bicycle.cost, price):
     #     margin = price - Bicycle.cost
     #     return margin
@@ -22,5 +24,8 @@ class Shop(object):
             
             
 myBike = Bicycle("Schwinn", 24, 200)
-print myBike.name
-print Shop.inventory
+myBike1 = Bicycle("Torpedo", 24, 200)
+
+shop = Shop("Sam's Bikes", [myBike,myBike1])
+
+shop.addInventory(myBike)
