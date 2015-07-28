@@ -63,5 +63,10 @@ def billAfford():
         
     return canAfford
     
+def samAfford():
+    for x in len(bicycles):
+        if sam.fund >= bicycles[x].price:
+           canAfford.append(bicycles[x]) 
+    
 print canAfford
 
