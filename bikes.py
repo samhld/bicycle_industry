@@ -3,6 +3,7 @@ class Bicycle(object):
         self.name = name
         self.weight = weight
         self.cost = cost
+        self.price = price
     def __repr__(self): 
         return "Bicycle(%r, %r, %r)" % (self.name, self.weight, self.cost)
     
@@ -54,19 +55,24 @@ jared = Customer("Jared", 1000)
 
 customers = [bill,sam,jared]
 
-canAfford = []
 
-def billAfford():
-    for x in len(bicycles):
-        if bill.fund >= bicycles[x].price:
-           canAfford.append(bicycles[x]) 
-        
-    return canAfford
+def afford(customer):
+    canAfford = []
+    for x in bicycles:
+        if customer.fund >= x.price:
+           canAfford.append(x) 
+           
+    return canAfford 
     
-def samAfford():
-    for x in len(bicycles):
-        if sam.fund >= bicycles[x].price:
-           canAfford.append(bicycles[x]) 
     
-print canAfford
+# def afford(customer):
+#     canAfford = []
+#     for x in range(len(bicycles)):
+#         if customer.fund >= bicycles[x].price:
+#           canAfford.append(bicycles[x])           
+#    return canAfford
+    
+
+    
+print afford(sam)
 
