@@ -1,6 +1,6 @@
-import Bicycle
-import Shop
-import Customer
+from bikes import Bicycle
+from bikes import Shop
+from bikes import Customer
 import random
 
 
